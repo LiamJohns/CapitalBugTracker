@@ -135,19 +135,6 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QLabel" name="test">
-   <property name="geometry">
-    <rect>
-     <x>430</x>
-     <y>50</y>
-     <width>47</width>
-     <height>13</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>TextLabel</string>
-   </property>
-  </widget>
  </widget>
  <resources/>
  <connections/>
