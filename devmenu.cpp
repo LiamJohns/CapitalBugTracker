@@ -1,5 +1,6 @@
 #include "devmenu.h"
 #include "ui_devmenu.h"
+#include "devwindow.h"
 
 devMenu::devMenu(QWidget *parent) :
     QDialog(parent),
@@ -11,4 +12,17 @@ devMenu::devMenu(QWidget *parent) :
 devMenu::~devMenu()
 {
     delete ui;
+}
+
+
+void devMenu::on_viewDefBtn_clicked(){
+    this->close();
+}
+
+void devMenu::on_reportDefBtn_clicked(){
+    this->close();
+}
+
+void devMenu::on_logOutBtn_clicked(){
+    this->close();
 }
