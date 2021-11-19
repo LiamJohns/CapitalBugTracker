@@ -23,9 +23,6 @@ void menu1::on_devBtn_clicked(){
     window= new devwindow(this);
     window->show();
 
-
-
-
 }
 
 

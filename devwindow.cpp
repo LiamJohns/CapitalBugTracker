@@ -2,6 +2,7 @@
 #include "ui_devwindow.h"
 #include "devmenu.h"
 #include "QMessageBox"
+#include <QLabel>
 
 devwindow::devwindow(QWidget *parent) :
     QDialog(parent),
@@ -21,12 +22,9 @@ QString user = ui->userEdit->text();
 QString pass = ui->passEdit->text();
 
 if( user=="Dev" && pass=="dev" ){
-
-  window2= new devMenu(this);
-window2->show();
-
-
-
+    this->close();
+    window2= new devMenu(this);
+    window2->show();
 }
 else {
     QMessageBox::warning(this, "Login","Incorrect username or password");
@@ -34,6 +32,10 @@ else {
 }
 
 }
+
+
+
+
 
 
 
