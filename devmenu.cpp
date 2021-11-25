@@ -1,19 +1,22 @@
 #include "devmenu.h"
 #include "ui_devmenu.h"
-#include "devwindow.h"
 
 devMenu::devMenu(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::devMenu)
 {
     ui->setupUi(this);
+
+
+
+
 }
+
 
 devMenu::~devMenu()
 {
     delete ui;
 }
-
 
 void devMenu::on_viewDefBtn_clicked(){
     this->close();
