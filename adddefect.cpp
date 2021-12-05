@@ -1,6 +1,11 @@
 #include "adddefect.h"
 #include "ui_adddefect.h"
 #include "QMessageBox"
+#include "trackingclasses.h"
+
+Defect de;
+
+
 
 addDefect::addDefect(QWidget *parent) :
     QDialog(parent),
@@ -8,6 +13,10 @@ addDefect::addDefect(QWidget *parent) :
 {
     ui->setupUi(this);
 }
+
+
+
+
 
 addDefect::~addDefect()
 {
@@ -19,6 +28,54 @@ void addDefect::on_backBtn_clicked(){
 }
 
 void addDefect::on_submitBtn_clicked(){
+    QVector<Defect>
+        write_defects(Defect);
+          read_defect();
+
     this->close();
     QMessageBox::information(this, "Report Defect","Defect report has been submitted.");
 }
+
+
+
+
+
+
+
+void addDefect::on_idEdit_textChanged(const QString &arg1)
+{
+   de.set_id(arg1);
+}
+
+
+
+void addDefect::on_nameEdit_textChanged(const QString &arg2)
+
+{
+de.set_name(arg2);
+
+}
+
+
+void addDefect::on_statusEdit_textChanged(const QString &arg3)
+{
+    de.set_status(arg3);
+}
+
+
+
+
+void addDefect::on_descEdit_textChanged(const QString &arg4)
+{
+    de.set_desc(arg4);
+
+}
+
+
+
+void addDefect::on_reportedEdit_textChanged(const QString &arg5)
+{
+
+   de.set_reported_by(arg5);
+}
+
