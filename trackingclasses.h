@@ -12,63 +12,63 @@
 
 
 //Base Class Contributor
-//class Contributor{
-//protected:
-//    QString name;
-//    QString username;
-//    QString password;
-//    bool logged_in;
+class Contributor{
+protected:
+    QString name;
+    QString username;
+    QString password;
+    bool logged_in;
 
-//public:
-//    virtual int authority_level() = 0;
+public:
+    virtual int authority_level() = 0;
 
-//    void read_file(QString a, QString b, QString c, bool d){
-//        name = a;
-//        username = b;
-//        password = c;
-//        logged_in = d;
-//    }
+    void read_file(QString a, QString b, QString c, bool d){
+        name = a;
+        username = b;
+        password = c;
+        logged_in = d;
+    }
 
-//    virtual void read_file_dev(QString a, QString b, QString c, bool d, bool e);
-//};
+    virtual void read_file_dev(QString a, QString b, QString c, bool d, bool e);
+};
 
 //Derived Class Tester
-//class Tester : public Contributor{
-//private:
+class Tester : public Contributor{
+private:
 
-//public:
-//    int authority_level(){
-//        return 0;
-//    }
-//};
+public:
+    int authority_level(){
+        return 0;
+    }
+};
 
-//Derived Class Developer
-//class Developer : public Contributor{
-//private:
-//    bool is_working;
-//public:
-//    int authority_level(){
-//        return 1;
-//    }
+Derived Class Developer
+class Developer : public Contributor{
+private:
+    bool is_working;
+public:
+    int authority_level(){
+        return 1;
+    }
 
-//    void read_file_dev(QString a, QString b, QString c, bool d, bool e){
-//        name = a;
-//        username = b;
-//        password = c;
-//        logged_in = d;
-//        is_working = e;
-//    }
-//};
+    void read_file_dev(QString a, QString b, QString c, bool d, bool e){
+        name = a;
+        username = b;
+        password = c;
+        logged_in = d;
+        is_working = e;
+    }
+};
 
 //Derived Class Administrator
-//class Administrator : public Contributor{
-//private:
+class Administrator : public Contributor{
+private:
 
-//public:
-//    int authority_level(){
-//        return 2;
-//    }
-//};
+public:
+    int authority_level(){
+        return 2;
+    }
+};
 
 //Standalone Base Class Defect
 class Defect{
@@ -170,7 +170,7 @@ QVector<Defect> read_defect(){
     Defect *d;
 
     QStringList fileData;
-    QFile dcsv("C:/Users/liamj/OneDrive/Desktop/project/defects.csv");
+    QFile dcsv("defects.csv");
 
     if(dcsv.open(QIODevice::ReadOnly)){
         QTextStream in(&dcsv);
