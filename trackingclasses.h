@@ -170,7 +170,7 @@ QVector<Defect> read_defect(){
     Defect *d;
 
     QStringList fileData;
-    QFile dcsv("C:/Users/270121842/OneDrive - UP Education/Desktop/CS106/CapitalBugTracker/defects.csv");
+    QFile dcsv("C:/Users/liamj/OneDrive/Desktop/project/defects.csv");
 
     if(dcsv.open(QIODevice::ReadOnly)){
         QTextStream in(&dcsv);
@@ -253,7 +253,7 @@ QVector<Defect> read_defect(){
 
 
 void write_defects(QVector<Defect> defects){
-    QFile dcsv("C:/Users/270121842/OneDrive - UP Education/Desktop/CS106/CapitalBugTracker/defects.csv");
+    QFile dcsv("C:/Users/liamj/OneDrive/Desktop/project/defects.csv");
 
     if(dcsv.open(QIODevice::WriteOnly|QIODevice::Truncate)){
         QTextStream out(&dcsv);

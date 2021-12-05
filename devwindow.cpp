@@ -41,29 +41,6 @@ else {
 }
 
 
-void devwindow::on_togglePass_stateChanged(int i){
-
-    switch(i){
-
-
-    case 0:
-        ui->passEdit->setEchoMode(QLineEdit::Password);
-
-    break;
-
-     case 2:
-
-       ui->passEdit->setEchoMode(QLineEdit::Normal);
-
-
-        break;
-
-
-
-    }
-
-
-}
 
 
 
