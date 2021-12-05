@@ -19,6 +19,16 @@ private slots:
     void on_backBtn_clicked();
     void on_submitBtn_clicked();
 
+    void on_idEdit_textChanged(const QString &arg1);
+
+    void on_nameEdit_textChanged(const QString &arg2);
+
+    void on_statusEdit_textChanged(const QString &arg3);
+
+    void on_descEdit_textChanged(const QString &arg4);
+
+    void on_reportedEdit_textChanged(const QString &arg5);
+
 private:
     Ui::addDefect *ui;
 };
